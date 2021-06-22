@@ -9,7 +9,12 @@
    "keywords": [],
    "author": "",
    "license": "ISC",
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/aldimhr/MEVN-CRUD.git"
+   },
    "dependencies": {
+      "ejs": "^3.1.6",
       "express": "^4.17.1"
    }
 }
