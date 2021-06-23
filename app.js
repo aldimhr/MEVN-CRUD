@@ -2,10 +2,18 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
+// initial ejs
+app.set('view engine', 'ejs');
+
 // home
 app.get('/', (req, res) => {
    //  res.send('Hello World!');
-   res.sendFile('./index.html', { root: __dirname });
+   //  res.sendFile('./index.html', { root: __dirname });
+   let produk = [
+      { nama: 'sepatu', harga: 12000 },
+      { nama: 'sandal', harga: 10000 },
+   ];
+   res.render('index', { title: 'Home', produk });
 });
 
 // product detail
